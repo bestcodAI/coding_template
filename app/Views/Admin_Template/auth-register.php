@@ -21,7 +21,8 @@
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
+    <!-- <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" /> -->
+    <link rel="shortcut icon" href="https://th.bing.com/th/id/OIP.LV-80jId-K_QMkS5uHh_EwHaHa?pid=ImgDet&rs=1" type="image/x-icon">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 
-
 <html
   lang="en"
-  class="light-style customizer-hide"
+  class="light-style layout-menu-fixed"
   dir="ltr"
   data-theme="theme-default"
   data-assets-path="../assets/"
@@ -15,15 +14,14 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
-
-    <title>Forgot Password </title>
+  <!-- <link rel="shortcut icon" href="https://www.pngfind.com/pngs/m/5-53481_med-boukrima-specialist-webmaster-php-e-commerce-web.png" type="image/x-icon"> -->
+    <title>Dashboard Admin</title>
 
     <meta name="description" content="" />
 
     <!-- Favicon -->
     <!-- <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" /> -->
-    <link rel="shortcut icon" href="https://th.bing.com/th/id/OIP.LV-80jId-K_QMkS5uHh_EwHaHa?pid=ImgDet&rs=1" type="image/x-icon">
-
+  <link rel="shortcut icon" href="https://th.bing.com/th/id/OIP.LV-80jId-K_QMkS5uHh_EwHaHa?pid=ImgDet&rs=1" type="image/x-icon">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -43,9 +41,10 @@
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
 
+    <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
+
     <!-- Page CSS -->
-    <!-- Page -->
-    <link rel="stylesheet" href="../assets/vendor/css/pages/page-auth.css" />
+
     <!-- Helpers -->
     <script src="../assets/vendor/js/helpers.js"></script>
 
@@ -55,57 +54,44 @@
   </head>
 
   <body>
-    <!-- Content -->
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+      <div class="layout-container">
+        <?= $this->include("layouts/inc/sidebar.php") ?>
 
-    <div class="container-xxl">
-      <div class="authentication-wrapper authentication-basic container-p-y">
-        <div class="authentication-inner py-4">
-          <!-- Forgot Password -->
-          <div class="card">
-            <div class="card-body">
-              <!-- Logo -->
-              <div class="app-brand justify-content-center">
-                <a href="index.html" class="app-brand-link gap-2">
-                  <span class="app-brand-logo demo">
-                    <img src="https://cdn4.iconfinder.com/data/icons/coding-system-1/100/1_08-14-1024.png" alt="" style="width: 50px;">
-                  </span>
-                  <span class="app-brand-text demo text-body fw-bolder">coding</span>
-                </a>
-              </div>
-              <!-- /Logo -->
-              <h4 class="mb-2">Forgot Password? 🔒</h4>
-              <p class="mb-4">Enter your email and we'll send you instructions to reset your password</p>
-              <form id="formAuthentication" class="mb-3" action="index.html" method="POST">
-                <div class="mb-3">
-                  <label for="email" class="form-label">Email</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="email"
-                    name="email"
-                    placeholder="Enter your email"
-                    autofocus
-                  />
-                </div>
-                <button class="btn btn-primary d-grid w-100">Send Reset Link</button>
-              </form>
-              <div class="text-center">
-                <a href="<?php echo site_url('/login')?>" class="d-flex align-items-center justify-content-center">
-                  <i class="bx bx-chevron-left scaleX-n1-rtl bx-sm"></i>
-                  Back to login
-                </a>
-              </div>
-            </div>
+        <!-- Layout container -->
+        <div class="layout-page">
+          
+         <?= $this->include("layouts/inc/navbar.php") ?>
+
+          <!-- Content wrapper -->
+          <div class="content-wrapper">
+            <?= $this->renderSection("content") ?>
+
+            <?= $this->include("layouts/inc/footer.php") ?>
+
+            <div class="content-backdrop fade"></div>
           </div>
-          <!-- /Forgot Password -->
+          <!-- Content wrapper -->
         </div>
+        <!-- / Layout page -->
       </div>
+
+      <!-- Overlay -->
+      <div class="layout-overlay layout-menu-toggle"></div>
     </div>
-
-    <!-- / Content -->
-
-
-    <!-- Core JS -->
+    <!-- / Layout wrapper -->
+    <div class="buy-now">
+      <a
+        href="https://bit.ly/3oBfFux"
+        target="_blank"
+        class="btn btn-danger btn-buy-now"
+        >Click for free</a
+      >
+    </div>
+   
+ 
+  <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <script src="../assets/vendor/libs/jquery/jquery.js"></script>
     <script src="../assets/vendor/libs/popper/popper.js"></script>
@@ -116,11 +102,14 @@
     <!-- endbuild -->
 
     <!-- Vendors JS -->
+    <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
 
     <!-- Main JS -->
     <script src="../assets/js/main.js"></script>
 
+    
     <!-- Page JS -->
+    <script src="../assets/js/dashboards-analytics.js"></script>
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
